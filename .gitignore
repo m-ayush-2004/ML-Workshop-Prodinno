@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+
+# large/raw intermediate data caches (kept datasets are the small curated CSVs)
+06_capstone/models/v_*/
+
+.env
+.DS_Store
+Thumbs.db

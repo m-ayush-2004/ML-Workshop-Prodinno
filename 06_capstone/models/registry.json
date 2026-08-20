@@ -1,0 +1,53 @@
+{
+  "versions": [
+    {
+      "version": "v_20260820_213651",
+      "timestamp": "20260820_213651",
+      "note": "initial bootstrap model",
+      "metrics": {
+        "accuracy": 0.8701,
+        "precision": 0.8148,
+        "recall": 0.8148,
+        "f1": 0.8148,
+        "roc_auc": 0.9524,
+        "n_train_rows": 614,
+        "n_test_rows": 154,
+        "n_total_rows": 768
+      },
+      "path": "models/v_20260820_213651"
+    },
+    {
+      "version": "v_20260820_214555",
+      "timestamp": "20260820_214555",
+      "note": "capstone walkthrough notebook",
+      "metrics": {
+        "accuracy": 0.8701,
+        "precision": 0.8148,
+        "recall": 0.8148,
+        "f1": 0.8148,
+        "roc_auc": 0.9524,
+        "n_train_rows": 614,
+        "n_test_rows": 154,
+        "n_total_rows": 768
+      },
+      "path": "models/v_20260820_214555"
+    },
+    {
+      "version": "v_20260820_163618",
+      "timestamp": "20260820_163618",
+      "note": "docker smoke test",
+      "metrics": {
+        "accuracy": 0.8896,
+        "precision": 0.8364,
+        "recall": 0.8519,
+        "f1": 0.844,
+        "roc_auc": 0.9531,
+        "n_train_rows": 614,
+        "n_test_rows": 154,
+        "n_total_rows": 768
+      },
+      "path": "models/v_20260820_163618"
+    }
+  ],
+  "latest": "v_20260820_163618"
+}
