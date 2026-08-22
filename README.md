@@ -26,8 +26,10 @@
 
 ## What's in this repo
 
-Six folders, each a self-contained topic. Every topic folder follows the **same four-notebook
-flow**, so once you've worked through one, the rest feel familiar:
+Six numbered topic folders, each a self-contained session, plus two optional folders outside
+the event flow: a pre-workshop refresher (`00_foundations/`) and a post-workshop deep dive
+(`07_bonus_deep_dive/`). Every topic folder follows the **same four-notebook flow**, so once
+you've worked through one, the rest feel familiar:
 
 | Order | Notebook | What happens |
 |---|---|---|
@@ -44,6 +46,28 @@ flow**, so once you've worked through one, the rest feel familiar:
 | `04_xgboost/` | XGBoost | Pima Indians Diabetes | Disguised missing values (sentinel zeros) |
 | `05_hierarchical_clustering/` | Hierarchical Clustering | Country Indicators | Inconsistent categorical text |
 | `06_capstone/` | Capstone | Pima Indians Diabetes | End-to-end: Docker, UI, retraining, model versioning, SHAP & LIME |
+
+### `00_foundations/` — Module 0, a pre-workshop refresher
+
+Four short, independently-runnable notebooks brushing up the Python data stack before Session
+1 starts, all built on one shared synthetic dataset:
+
+| Notebook | Covers |
+|---|---|
+| `00_numpy_and_pandas.ipynb` | Array creation/indexing/broadcasting/vectorization, then DataFrame selection, filtering, missing data, `groupby`, and `merge`. |
+| `01_matplotlib.ipynb` | The `fig, ax = plt.subplots()` pattern — line, bar, scatter, histogram, and multi-panel figures. |
+| `02_seaborn.ipynb` | `histplot`, `violinplot`, `scatterplot` with `hue`, correlation `heatmap`, and `pairplot`. |
+| `03_plotly.ipynb` | Interactive `px` charts and `graph_objects`, plus a "stunning visuals" section: a rotatable 3D `go.Surface`, the classic animated Gapminder bubble chart, a `px.choropleth` map for regional data, and a `px.sunburst`. |
+
+### `07_bonus_deep_dive/` — optional, for after Session 1
+
+Two notebooks for anyone who wants to go beyond the workshop's pace on gradient descent and
+neural networks:
+
+| Notebook | Covers |
+|---|---|
+| `01_gradient_descent_lab.ipynb` | Animated Plotly visuals of gradient descent fitting a line, a too-high learning rate bouncing and diverging, an interactive learning-rate slider tool, and a batch/stochastic/mini-batch comparison. |
+| `02_neural_network_from_scratch.ipynb` | A 2 → 3 → 2 neural network built in raw numpy — forward pass, hand-derived backpropagation, an animated decision-boundary visualization, and a sigmoid/tanh/ReLU activation-function comparison. |
 
 ## Setup (Windows Terminal / PowerShell)
 
@@ -70,6 +94,9 @@ To come back to the environment in a new terminal later:
 
 ## Recommended run order
 
-Work through the folders in numeric order (`01_` → `05_`) — each mirrors the event flow
-above. The capstone (`06_capstone/`) is the closing project: read its own `README.md` for
-the Docker instructions.
+Start with `00_foundations/` if you want a quick brush-up on the Python data stack before the
+event begins, then work through the numbered topic folders in order (`01_` → `05_`) — each
+mirrors the event flow above. The capstone (`06_capstone/`) is the closing project: read its
+own `README.md` for the Docker instructions. `07_bonus_deep_dive/` is optional, self-paced
+material for after Session 1, for anyone who wants to go deeper on gradient descent and
+neural networks than the workshop's pace allows.
