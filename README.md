@@ -71,25 +71,34 @@ neural networks:
 
 ## Setup (Windows Terminal / PowerShell)
 
-From the repo root:
+The workshop uses [`uv`](https://docs.astral.sh/uv/) to manage the Python environment, and
+Docker for the capstone. From the repo root:
 
 ```powershell
 .\setup.ps1
 ```
 
 This will:
-1. Create a local virtual environment in `.venv`
-2. Install every dependency declared in `pyproject.toml` (pandas, scikit-learn, xgboost,
-   matplotlib, seaborn, plotly, shap, lime, streamlit, fastapi, jupyter, …)
-3. Register a Jupyter kernel named **"Prodinno ML Workshop"**
+1. Check for WSL 2 and Docker Desktop (needed later for the capstone) and print install
+   instructions if either is missing — it does not install them for you, since both need an
+   elevated session, a GUI installer, or a restart.
+2. Install `uv` if it isn't already on `PATH`.
+3. Run `uv sync` to create/update a local virtual environment (`.venv`) with every dependency
+   declared in `pyproject.toml` (pandas, scikit-learn, xgboost, matplotlib, seaborn, plotly,
+   shap, lime, streamlit, fastapi, jupyter, …).
+4. Register a Jupyter kernel named **"Prodinno ML Workshop"**.
+5. Verify the Python environment and Jupyter both import/run correctly.
+
+It does **not** build or run the capstone's Docker containers — see
+`06_capstone/README.md` for that separate, optional step.
 
 Then open any notebook (VS Code, JupyterLab, or `jupyter notebook`) and select the
 **Prodinno ML Workshop** kernel.
 
-To come back to the environment in a new terminal later:
+To run anything from a new terminal later, prefix it with `uv run`, e.g.:
 
 ```powershell
-.\.venv\Scripts\Activate.ps1
+uv run jupyter lab
 ```
 
 ## Recommended run order
